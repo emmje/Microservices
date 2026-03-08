@@ -19,14 +19,14 @@ Recently, they moved toward a graph approach which allows their client-side appl
 ### Database per Service
 They are strict about this. No two services share a database. This prevents "spaghetti data" where changing a table for one feature breaks five others.
 
-## Companies Successfully Utilizing Microservices
+## Other Companies Successfully Utilizing Microservices
 ### Amazon
 Amazon underwent a massive architectural shift in the early 2000s when its monolithic C++ application, Obidos, became too large to manage. The company moved toward a service-oriented architecture where every team owns their service from end to end. This decoupling was the foundational work that eventually allowed them to productize their internal infrastructure as Amazon Web Services.
 
 ### Uber
 Initially, Uber operated on a monolithic Python codebase that worked well for a single city. As they expanded globally, the complexity of adding new features like UberEats or different vehicle types caused the system to become fragile. They migrated to a microservices model primarily using Go and Java. To manage the thousands of services they now run, Uber developed Domain-Oriented Microservices (DOMA). This approach groups related services into domains. 
 
-## Companies That Returned to Monolithic Architectures
+## Companies That Returned to Monolithic Architectures and Why
 ### Amazon Prime Video
 In 2023, the Prime Video engineering team published a case study detailing their move from a microservices architecture back to a monolith for their video quality monitoring tool. The original distributed system relied on AWS Step Functions to coordinate between services. At scale, the overhead of moving data between these services became prohibitively expensive and introduced latency. By consolidating the logic into a single process, they eliminated the need for costly orchestration and reduced their infrastructure costs.
 
