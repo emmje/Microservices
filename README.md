@@ -1,4 +1,4 @@
-# The Microservice Architecture
+# The Microservices Architecture
 Think of microservices like a specialized pit crew. Instead of one guy trying to change the tires, refuel the car, and wipe the windshield all at once (monolith), you have a team of experts. One person does tires, one does fuel. They’re fast, they’re independent, and if the tire guy trips, the fuel guy can still do his job.
 
 In technical terms, microservices are an architectural style where an application is built as a collection of small, independent services that communicate over a network, usually via APIs. This approach allows teams to develop, deploy, and scale specific parts of an application without needing to update the entire system.
