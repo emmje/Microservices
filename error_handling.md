@@ -1,4 +1,5 @@
 # Error Handling and Logging Analysis
+### Nicole M Johnson S23B23/020
 
 ### Project Selected
 
@@ -7,7 +8,7 @@ The Requests library (https://github.com/psf/requests) was chosen because:
 - Handles many things well but has error handling improvement opportunities
 - Aligns with defensive programming and logging strategies
 
----
+
 
 ## Part 1: Analysis of Poorly Written Error Handling Code
 
@@ -72,7 +73,7 @@ class JSONDecodeError(InvalidJSONError):
 - Requests developers created specific exception types
 - Many developers ignore them and write the poor pattern above
 
----
+
 
 ## Part 2: Improving Exception Handling Strategies
 
@@ -174,7 +175,7 @@ def fetch_user_data(user_id, api_url):
         raise
 ```
 
-### Why This Version Is Better
+### Why this version is better
 
 - Input validation before requests
   - Validates user_id and api_url immediately
@@ -196,7 +197,7 @@ def fetch_user_data(user_id, api_url):
   - Caller must handle or program fails loudly
   - Prevents silent corruption
 
----
+
 
 ## Part 3: Adding Meaningful Logging
 
@@ -310,7 +311,7 @@ def make_api_call_with_logging(endpoint, method="GET", **kwargs):
   - Suggests how to address issues
   - Not just timeout, but why and what to check
 
----
+
 
 ## Part 4: Comparing Human Reasoning with AI-Generated Suggestions
 
@@ -367,7 +368,7 @@ except APIError as e:
         fail()
 ```
 
-#### Why Human Design Is Better
+#### Why Human Thinking is Better
 
 - Requests developers understand production systems
 - Timeout handling fundamentally different from URL validation
@@ -413,7 +414,7 @@ Problems:
 - Developer doesn't see errors occurred
 - Bugs hide in production
 
-#### Why Human Design Is Better
+#### Why Human Thinking is Better
 
 - Requests developers understand fail fast principle
 - Library raises exceptions visibly by design
@@ -452,14 +453,14 @@ Problems:
 - File downloads fail with 5 second timeout
 - Microservices fail with 60 second timeout
 
-#### Why Human Design Is Better
+#### Why Human Thinking is Better
 
 - No universal right timeout exists
 - Forcing explicit timeout is defensive programming
 - Makes developers think about failure scenarios
 - Accounts for context-specific requirements
 
----
+
 
 ## Part 5: Conclusion
 
@@ -503,7 +504,7 @@ Problems:
   - Hides errors
   - Prevents debugging and improvement
 
-### Lessons from Requests Library
+### Lessons from the Requests Library
 
 - Best error handling respects production environment
 - Different failures have different solutions
